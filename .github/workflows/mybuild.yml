@@ -163,7 +163,7 @@ jobs:
         echo "tag=v${VERSION_NAME}-${{ github.run_number }}" >> "$GITHUB_OUTPUT"
 
     - name: Create Release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       with:
         tag_name: ${{ steps.version.outputs.tag }}
         name: AmneziaWG ${{ steps.version.outputs.tag }}
